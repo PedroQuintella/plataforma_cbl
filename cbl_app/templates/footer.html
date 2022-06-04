@@ -1,0 +1,46 @@
+{% load static %}
+
+<footer class="container-fluid footer">
+  <div class="text-white">
+    <div class="row">
+      <div class="display-flex div-logo col-lg-5 mt-4 text-center">
+        <a href="{% url 'index' %}">
+            <img src="{% static 'images/logotipo_cbl.jpg' %}" class="img-fluid footer-logo" alt="Logotipo Plataforma CBL">
+        </a>
+      </div>
+      <div class="display-flex div-links-e-slogan mt-4">
+        <div class="div-links">
+            <div>
+                <a class="navbar-brand link-verde-escuro" href="https://www.challengebasedlearning.org/pt/cbl-news/">
+                    Notícias
+                </a>
+            </div>
+            <div>
+                <a class="navbar-brand link-verde-claro" href="https://www.challengebasedlearning.org/pt/resources/">
+                    Biblioteca de recursos
+                </a>
+            </div>
+            <div>
+                <a class="navbar-brand link-laranja" href="https://www.challengebasedlearning.org/pt/stories/">
+                    Histórias e depoimentos
+                </a>
+            </div>
+            <div>
+                <a class="navbar-brand link-verde-escuro" href="https://www.challengebasedlearning.org/pt/learn/cbl-publications-and-research/">
+                    Pesquisas e publicações
+                </a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="display-flex div-slogan">
+        <p>A Plataforma CBL facilita a maneira como você utiliza a metodologia de aprendizagem baseada em desafios (Challenge Based Learning).</p>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 mt-3 text-center">
+        <p>
+            © 2022 Plataforma CBL - Todos os direitos reservados - <a id="contato-footer" href="mailto:contato@plataformacbl.com.br">Contato</a></p>
+      </div>
+    </div>
+  </div>
+</footer>

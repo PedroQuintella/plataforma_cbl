@@ -1,0 +1,141 @@
+/*----------- navbar.html -----------*/
+.nav-color {
+    background-color: white !important;
+}
+
+.nav-logo {
+    width: 200px;
+}
+
+.div-principal-navbar {
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.link-verde-escuro {
+    color: #228998;
+}
+
+.link-verde-escuro:hover {
+    color: #228998;
+}
+
+.link-verde-claro {
+    color: #AFCA48;
+}
+
+.link-verde-claro:hover {
+    color: #AFCA48;
+}
+
+.link-laranja {
+    color: #DB5A33;
+}
+
+.link-laranja:hover {
+    color: #DB5A33;
+}
+/*----------- //navbar.html -----------*/
+
+/*----------- footer.html -----------*/
+.footer {
+    background-color: #343a40;
+}
+
+.div-logo {
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 30px;
+}
+
+.footer-logo {
+    width: 250px;
+}
+
+.div-links-e-slogan {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.div-links {
+    padding-left: 30px;
+}
+
+.div-slogan {
+    justify-content: center;
+}
+
+.div-slogan p {
+    text-align: justify;
+    margin-top: 25px;
+    margin-bottom: 0px;
+}
+/*----------- //footer.html -----------*/
+
+/*----------- index.html -----------*/
+.div-titulo {
+    justify-content: center;
+    margin-bottom: 35px;
+}
+
+.div-titulo h1 {
+    font-family: "Lovely Nathalie Script", Arial, serif;
+}
+
+.primeiro-paragrafo-cbl {
+    text-align: justify;
+    text-indent: 2em;
+}
+
+.span-nome-cbl {
+    color: #DB5A33;
+}
+
+.div-video {
+    flex-direction: column;
+    align-items: center;
+}
+/*----------- //index.html -----------*/
+
+/*----------- global -----------*/
+@font-face {
+    font-family: Lovely Nathalie Script;
+    src: url("../fonts/LovelyNathalie.ttf");
+}
+
+html {
+    min-height: 100%;
+    min-width: 100%;
+}
+
+body {
+    background-color: #F8F9FA;
+    position: absolute;
+    min-height: 100%;
+    height: 100%;
+    min-width: 100%;
+    width: 100%;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.section-conteudo-pagina {
+    min-height: inherit;
+    padding: 27px 51.4px 27px 51.4px;
+}
+
+.div-conteudo-pagina {
+    padding: 45px 55px 45px 55px;
+    background-color: white;
+    border-radius: 3px;
+}
+/*----------- //global -----------*/
