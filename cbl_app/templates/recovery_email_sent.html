@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <section class="section-conteudo-pagina">
+    <div class="div-conteudo-pagina">
+        <div class="display-flex div-email-sent">
+            <h2 class="shipping-confirmation-title">Redefinição de senha enviada</h2>
+            <p>
+                Se existe uma conta com o email informado, nós te enviamos as instruções para redefinição de sua senha. A mensagem chegará em breve.
+                Caso não encontre nosso email, verifique em sua caixa de spam. Certifique-se que forneceu o endereço de email correto com o qual
+                você está cadastrado.
+            </p>
+            <a class="back-button" href="{% url 'login' %}"><button type="button" id="botao-voltar" class="btn btn-primary botao-form">Voltar</button></a>
+        </div>
+    </div>
+    </section>
+{% endblock %}
