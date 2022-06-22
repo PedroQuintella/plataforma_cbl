@@ -89,6 +89,14 @@
     font-family: "Lovely Nathalie Script", Arial, serif;
 }
 
+.span-acao {
+    color: #AFCA48;
+}
+
+.span-diferenca {
+    color: #228998;
+}
+
 .primeiro-paragrafo-cbl {
     text-align: justify;
     text-indent: 2em;
@@ -101,8 +109,148 @@
 .div-video {
     flex-direction: column;
     align-items: center;
+    padding: 25px 0px 25px 0px;
 }
 /*----------- //index.html -----------*/
+
+/*----------- about.html -----------*/
+.div-titulo-sobre {
+    justify-content: center;
+    margin-bottom: 35px;
+}
+
+.div-titulo-sobre h1 {
+    font-size: 1.7em;
+}
+
+.div-conteudo-sobre {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 0px 20px 0px;
+}
+
+.div-diagrama-cbl {
+    width: 40%;
+    justify-content: center;
+}
+
+.div-diagrama-cbl img {
+    width: 367px;
+    aspect-ratio: 340 / 340;
+}
+
+.div-paragrafos-sobre {
+    flex-direction: column;
+    width: 60%;
+    justify-content: center;
+    margin: 0px 0px 0px 40px;
+}
+
+.paragrafo-sobre-cbl {
+    text-align: justify;
+    text-indent: 2em;
+}
+/*----------- //about.html -----------*/
+
+/*----------- login.html -----------*/
+.div-titulo-login {
+    padding: 2rem 1rem 2rem 1rem;
+    justify-content: center;
+}
+
+.div-titulo-login h1 {
+    margin: 0px;
+}
+
+.div-login {
+    padding: 0rem 1rem;
+}
+
+#login-Block {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#login-fields {
+    flex: 0 0 50%;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.login-selector-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 25px;
+}
+
+#password-recovery-button {
+    color: #DB5A33;
+    background-color: transparent;
+}
+
+.enter-button:active {
+    border: none !important;
+}
+/*----------- //login.html -----------*/
+
+/*----------- password_recovery.html -----------*/
+.div-recuperacao-senha {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#div-email-field {
+    flex-direction: column;
+    flex: 0 0 auto;
+    width: 30%;
+}
+
+#div-email-field p {
+    text-align: justify;
+}
+
+#div-email-field form {
+    flex-direction: column;
+    align-items: center;
+}
+
+.div-form-email {
+    margin: auto;
+}
+
+#botao-enviar-link {
+    width: initial;
+}
+/*----------- //password_recovery.html -----------*/
+
+/*----------- recovery_email_sent.html -----------*/
+.div-email-sent {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+    padding-top: 2rem;
+    text-align: justify;
+}
+
+.div-email-sent p {
+    margin-top: 30px;
+}
+
+#botao-voltar {
+    width: 200px;
+}
+/*----------- //recovery_email_sent.html -----------*/
 
 /*----------- global -----------*/
 @font-face {
@@ -126,6 +274,14 @@ body {
 
 .display-flex {
     display: flex;
+}
+
+.botao-form {
+    margin: 25px 0px 25px 0px;
+    background-color: #228998 !important;
+    backcolor: #fff;
+    width: 100%;
+    border: none;
 }
 
 .section-conteudo-pagina {
