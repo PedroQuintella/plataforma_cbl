@@ -1,5 +1,5 @@
 # Create your views here.
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 from django.urls import reverse
@@ -16,7 +16,6 @@ class AboutView(TemplateView):
     template_name = 'about.html'
 
 class SignupView(View):
-
     def get(self, request):
         data = {'form': SignupForm()}
         return render(request, 'signup.html', data)
@@ -69,6 +68,11 @@ class LoginView(View):
             'error': 'Usuário ou senha inválidos'
         }
         return render(request, 'login.html', data)
+
+class LogoutView(LoginRequiredMixin, View):
+    def get(self, request):
+        logout(request)
+        return HttpResponseRedirect(reverse('index'))
 
 class RecuperacaoSenhaView(LoginRequiredMixin, TemplateView):
     template_name = 'password_recovery.html'

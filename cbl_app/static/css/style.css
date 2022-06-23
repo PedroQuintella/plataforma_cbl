@@ -152,6 +152,14 @@
 }
 /*----------- //about.html -----------*/
 
+/*----------- signup.html -----------*/
+.div-regras-senha p {
+    font-size: 10px;
+    font-weight: bold;
+    color: #b0b3b6;
+}
+/*----------- //signup.html -----------*/
+
 /*----------- login.html -----------*/
 .div-titulo-login {
     padding: 2rem 1rem 2rem 1rem;
@@ -274,6 +282,10 @@ body {
 
 .display-flex {
     display: flex;
+}
+
+.div-link-form {
+    text-align: center;
 }
 
 .botao-form {

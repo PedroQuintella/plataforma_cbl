@@ -2,12 +2,13 @@ from django.urls import path
 from django.contrib.auth import views as auth_views
 from django.views.static import serve
 from django.conf import settings
-from .views import IndexView, AboutView, LoginView, SignupView, RecuperacaoSenhaView, RedefinicaoSenhaView, ConfirmacaoRedefinicaoView, EmailEnviadoView
+from .views import IndexView, AboutView, LoginView, LogoutView, SignupView, RecuperacaoSenhaView, RedefinicaoSenhaView, ConfirmacaoRedefinicaoView, EmailEnviadoView
 
 urlpatterns = [
     path('', IndexView.as_view(), name='index'),
     path('sobre/', AboutView.as_view(), name='sobre'),
     path('login/', LoginView.as_view(), name='login'),
+    path('logout/', LogoutView.as_view(), name='logout'),
     path('cadastro/', SignupView.as_view(), name='signup'),
     path('redefinicao-senha/', RedefinicaoSenhaView.as_view(), name='redefinicaoSenha'),
     path('confirmacao-de-redefinicao/', ConfirmacaoRedefinicaoView.as_view(), name='confirmacaoRedefinicao'),
