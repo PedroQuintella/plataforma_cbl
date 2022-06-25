@@ -18,13 +18,13 @@
                 </li>
                 {% if request.user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="link-verde-claro nav-link" aria-current="page" href="#">
+                        <a class="link-verde-claro nav-link" aria-current="page" href="{% url 'meusDesafios' %}">
                             <i class="fa-solid fa-bolt link-verde-claro"></i>
                             <span>Meus desafios</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="link-verde-claro nav-link" aria-current="page" href="#">
+                        <a class="link-verde-claro nav-link" aria-current="page" href="{% url 'contaUsuario' %}">
                             <i class="fa-solid fa-circle-user link-verde-claro"></i>
                             <span>Conta</span>
                         </a>

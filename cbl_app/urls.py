@@ -2,7 +2,7 @@ from django.urls import path
 from django.contrib.auth import views as auth_views
 from django.views.static import serve
 from django.conf import settings
-from .views import IndexView, AboutView, LoginView, LogoutView, SignupView, RecuperacaoSenhaView, RedefinicaoSenhaView, ConfirmacaoRedefinicaoView, EmailEnviadoView
+from .views import IndexView, AboutView, LoginView, LogoutView, SignupView, ContaUsuarioView, MeusDesafiosView, DesafioView, NovoDesafioView, RecuperacaoSenhaView, RedefinicaoSenhaView, ConfirmacaoRedefinicaoView, EmailEnviadoView
 
 urlpatterns = [
     path('', IndexView.as_view(), name='index'),
@@ -10,6 +10,11 @@ urlpatterns = [
     path('login/', LoginView.as_view(), name='login'),
     path('logout/', LogoutView.as_view(), name='logout'),
     path('cadastro/', SignupView.as_view(), name='signup'),
+    path('conta/', ContaUsuarioView.as_view(), name='contaUsuario'),
+    path('editar-conta/', ContaUsuarioView.as_view(), name='edicaoConta'),
+    path('meus-desafios/', MeusDesafiosView.as_view(), name='meusDesafios'),
+    path('desafio/<int:id>/', DesafioView.as_view(), name='desafio'),
+    path('novo-desafio/', NovoDesafioView.as_view(), name='novoDesafio'),
     path('redefinicao-senha/', RedefinicaoSenhaView.as_view(), name='redefinicaoSenha'),
     path('confirmacao-de-redefinicao/', ConfirmacaoRedefinicaoView.as_view(), name='confirmacaoRedefinicao'),
     path('esqueci-senha/', auth_views.PasswordResetView.as_view(template_name="password_recovery.html"), name="reset_password"),

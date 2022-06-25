@@ -34,16 +34,15 @@
                                 </p>
                             </div>
 
-                            <div class="div-link-form">
+                            <div class="display-flex div-link-form">
+                                {% if error %}
+                                    <span class="erro-form" style="color: red;">{{ error }}</span>
+                                {% endif %}
+
                                 <a href="{% url 'login' %}"  id="password-recovery-button" class="badge">Já possui conta? Faça login.</a>
                             </div>
 
-                            {% if error %}
-                                <span style="color: red;">{{ error }}</span>
-                                <br><br>
-                            {% endif %}
-
-                            <button type="submit" value="Enviar" class="btn btn-primary botao-form">Criar conta</button>
+                            <button type="submit" value="Enviar" class="botao btn btn-primary botao-form">Criar conta</button>
                         </form>
                     </div>
                 </div>

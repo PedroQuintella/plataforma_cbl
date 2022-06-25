@@ -22,18 +22,16 @@
                                 {{ form|crispy }}
                             </div>
 
-                            <div class="div-link-form">
+                            <div class="display-flex div-link-form">
+                                {% if error %}
+                                    <span class="erro-form" style="color: red;">{{ error }}</span>
+                                {% endif %}
+
                                 <a href="{% url 'reset_password' %}"  id="password-recovery-button" class="badge">Esqueci a senha.</a>
-                                <br>
                                 <a href="{% url 'signup' %}"  id="password-recovery-button" class="badge">Não possui conta? Cadastre-se.</a>
                             </div>
 
-                            {% if error %}
-                                <span style="color: red;">{{ error }}</span>
-                                <br><br>
-                            {% endif %}
-
-                            <button type="submit" value="Enviar" class="btn btn-primary botao-form">Entrar</button>
+                            <button type="submit" value="Enviar" class="botao btn btn-primary botao-form">Entrar</button>
                         </form>
                     </div>
                 </div>

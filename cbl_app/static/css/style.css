@@ -209,6 +209,51 @@
 }
 /*----------- //login.html -----------*/
 
+/*----------- account.html -----------*/
+.div-titulo-conta {
+    padding: 0rem 1rem 2rem 1rem;
+    justify-content: center;
+
+}
+
+.icone-perfil {
+    color: #b0b3b6;
+    margin-bottom: 7px;
+}
+
+.div-cabecalho-conta {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-conta {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.margin-forms-conta {
+    margin: 10px;
+}
+
+.div-info-conta {
+    font-size: smaller;
+    color: #b0b3b6;
+    margin: 35px 0px 0px 0px;
+    text-align: center;
+    justify-content: center;
+}
+/*----------- //account.html -----------*/
+
+/*----------- my_challenges.html -----------*/
+.div-icone-card {
+    margin: 10px 0px 15px 0px;
+    flex-direction: column;
+    justify-content: center;
+}
+/*----------- //my_challenges.html -----------*/
+
 /*----------- password_recovery.html -----------*/
 .div-recuperacao-senha {
     flex-direction: column;
@@ -284,15 +329,27 @@ body {
     display: flex;
 }
 
-.div-link-form {
+.textoCentralizado {
     text-align: center;
 }
 
+.div-link-form {
+    flex-direction: column;
+    text-align: center;
+}
+
+.erro-form {
+    margin-bottom: 10px;
+}
+
 .botao-form {
+    width: 100%;
+}
+
+.botao {
     margin: 25px 0px 25px 0px;
     background-color: #228998 !important;
-    backcolor: #fff;
-    width: 100%;
+    color: #fff;
     border: none;
 }
 
