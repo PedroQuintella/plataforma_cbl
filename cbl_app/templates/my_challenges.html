@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <section class="section-conteudo-pagina">
+        <div class="div-conteudo-pagina">
+            <div class="div-titulo-conta">
+                <div class="display-flex div-titulo">
+                    <h3 class="span-nome-cbl">Meus desafios</h3>
+                </div>
+                <div class="display-flex div-cabecalho-conta">
+                    <i class="fa-solid fa-circle-user fa-5x icone-perfil"></i>
+
+                    <h5 class="header-text">@{{ request.user.username }}</h5>
+
+                    <a href="{% url 'novoDesafio' %}"><button type="button" value="Enviar" class="botao btn btn-primary">Começar novo desafio</button></a>
+                </div>
+            </div>
+            <div class="container mb-5">
+                <div>
+                    <div class="container mb-4 pt-4">
+                        <div class="row justify-content-center">
+                            {% for a in page_obj %}
+                                <div class="col-lg-3 m-2">
+                                    <div class="card border-primary" style="width: 18rem;">
+                                        <div class="card-body">
+                                            <div class="display-flex div-icone-card">
+                                                <i class="fa-solid fa-bolt link-verde-escuro fa-3x"></i>
+                                            </div>
+                                            <h5 class="card-title">{{ a.titulo }}</h5>
+                                            <p class="card-text">Tema: {{ a.grandeIdeia }}</p>
+                                            <p class="card-text">Data de Criação: <br> {{ a.dataCriacao }}</p>
+                                            <a href="{% url 'desafio' id=a.id %}" class="card-link">Conferir desafio</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                            <div class="pagination-div">
+                                {% include 'paginacao.html' %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+{% endblock %}

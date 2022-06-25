@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <section class="section-conteudo-pagina">
+        <div class="div-conteudo-pagina">
+            {% for d in desafioAtual%}
+                <div class="div-titulo-conta">
+                    <div class="display-flex div-titulo">
+                        <h3 class="span-nome-cbl">{{ d.titulo }}</h3>
+                    </div>
+                    <div class="display-flex div-cabecalho-conta">
+                        <i class="fa-solid fa-circle-user fa-5x icone-perfil"></i>
+
+                        <h5 class="header-text">@{{ request.user.username }}</h5>
+
+                        <button type="button" value="Enviar" class="botao btn btn-primary">Editar conta</button>
+                    </div>
+                </div>
+                <div class="container mb-5">
+                    <form class="display-flex form-conta g-3">
+                        <div class="col-md-4 margin-forms-conta">
+                            <label for="exampleInputEmail1" class="form-label">Nome</label>
+                            <input type="text" class="form-control" placeholder="{{ request.user.first_name }} {{ request.user.last_name }}" readonly>
+                        </div>
+                        <div class="col-md-4 margin-forms-conta">
+                            <label for="exampleInputEmail1" class="form-label">Email</label>
+                            <input type="email" class="form-control" placeholder="{{ request.user.email }}" readonly>
+                        </div>
+                        <div class="col-md-4 margin-forms-conta">
+                            <label for="exampleInputEmail1" class="form-label">Data de registro:</label>
+                            <input type="tel" class="form-control" placeholder="{{ request.user.date_joined }}" readonly>
+                        </div>
+                        <div class="col-md-4 margin-forms-conta">
+                            <label for="exampleInputEmail1" class="form-label">Último acesso à plataforma:</label>
+                            <input type="tel" class="form-control" placeholder="{{ request.user.last_login }}" readonly>
+                        </div>
+                    </form>
+            {% endfor %}
+                    <div class="display-flex div-info-conta">
+                        <p>*Sua senha não é exibida por segurança. Você pode alterar seus dados em "Editar conta".</p>
+                    </div>
+                </div>
+
+
+        </div>
+    </section>
+{% endblock %}
