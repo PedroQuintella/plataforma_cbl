@@ -96,20 +96,16 @@ class ContaUsuarioView(LoginRequiredMixin, TemplateView):
         context['usuario'] = User.objects.filter(username=self.request.user.username)
         return context
 
+
 class EdicaoContaView(LoginRequiredMixin, UpdateView):
     template_name = 'edit_account.html'
     model = User
-    fields = ['first_name', 'last_name', 'username', 'email', 'password']
+    fields = ['first_name', 'last_name', 'username', 'email']
     success_url = reverse_lazy("contaUsuario")
 
     def get_object(self, queryset=None):
-        self.object = get_object_or_404(User, usuario=self.request.user)
+        self.object = get_object_or_404(User, username=self.request.user.username)
         return self.object
-
-    def get_context_data(self, *args, **kwargs):
-        context = super(EdicaoContaView, self).get_context_data(*args, **kwargs)
-        context[""]
-        return context
 
     def get_context_data(self, **kwargs):
         context = super(EdicaoContaView, self).get_context_data(**kwargs)
@@ -144,14 +140,30 @@ class MeusDesafiosView(LoginRequiredMixin, ListView):
         return Desafio.objects.order_by('dataCriacao').all()
 
 
-class DesafioView(LoginRequiredMixin, TemplateView):
+class DesafioView(LoginRequiredMixin, UpdateView):
     template_name = 'challenge.html'
+    model = Desafio
+    fields = ['titulo', 'grandeIdeia', 'questaoEssencial', 'desafios', 'documentosEnvolver',
+                    'questoesNorteadoras', 'recursos', 'atividades', 'sintese', 'documentosInvestigar',
+                    'conceitosSolucao', 'implementacaoSolucao', 'avaliacao', 'documentosAgir', 'usuario']
+    success_url = reverse_lazy("meusDesafios")
+
+    def get_object(self, queryset=None, **kwargs):
+        id = self.kwargs['id']
+        self.object = get_object_or_404(Desafio, id=id)
+        return self.object
+
+    def get_context_data(self, **kwargs):
+        id = self.kwargs['id']
+        context = super(EdicaoContaView, self).get_context_data(**kwargs)
+        context['desafio'] = Desafio.objects.filter(id=id)
+        return context
 
     def get_context_data(self, **kwargs):
         context = super(DesafioView, self).get_context_data(**kwargs)
         context['desafio'] = Desafio.objects.filter(usuario=self.request.user)
         id = self.kwargs['id']
-        context['desafioAtual'] = Desafio.objects.filter(id=id).first
+        context['desafio'] = Desafio.objects.filter(id=id).first
         return context
 
 

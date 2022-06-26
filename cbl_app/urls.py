@@ -2,7 +2,7 @@ from django.urls import path
 from django.contrib.auth import views as auth_views
 from django.views.static import serve
 from django.conf import settings
-from .views import IndexView, AboutView, LoginView, LogoutView, SignupView, ContaUsuarioView, MeusDesafiosView, DesafioView, NovoDesafioView, RecuperacaoSenhaView, RedefinicaoSenhaView, ConfirmacaoRedefinicaoView, EmailEnviadoView
+from .views import IndexView, AboutView, LoginView, LogoutView, SignupView, ContaUsuarioView, EdicaoContaView, MeusDesafiosView, DesafioView, NovoDesafioView, RecuperacaoSenhaView, RedefinicaoSenhaView, ConfirmacaoRedefinicaoView, EmailEnviadoView
 
 urlpatterns = [
     path('', IndexView.as_view(), name='index'),
@@ -11,7 +11,7 @@ urlpatterns = [
     path('logout/', LogoutView.as_view(), name='logout'),
     path('cadastro/', SignupView.as_view(), name='signup'),
     path('conta/', ContaUsuarioView.as_view(), name='contaUsuario'),
-    path('editar-conta/', ContaUsuarioView.as_view(), name='edicaoConta'),
+    path('editar-conta/', EdicaoContaView.as_view(), name='edicaoConta'),
     path('meus-desafios/', MeusDesafiosView.as_view(), name='meusDesafios'),
     path('desafio/<int:id>/', DesafioView.as_view(), name='desafio'),
     path('novo-desafio/', NovoDesafioView.as_view(), name='novoDesafio'),
