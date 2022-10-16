@@ -401,3 +401,10 @@ body {
     height: 80%;
 }
 }
+
+@media screen and(min-width:995px){
+    .card-body{
+        margin-left: 50%;
+        padding-left: 50%;
+    }
+}
